@@ -1,0 +1,368 @@
+:root {
+  --highliter: #00d9ff;
+}
+/* primary navbar style */
+.navbar {
+  padding-inline: 2rem;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: whitesmoke;
+  overflow-x: hidden;
+  position: sticky;
+  top: 0;
+  border-bottom: 0.1rem solid var(--highliter);
+}
+.logo-box {
+  padding: 0.2rem 1rem;
+  /* background-color: aquamarine; */
+}
+.logo {
+  width: fit-content;
+  letter-spacing: 2px;
+  text-decoration: underline;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.logo:hover {
+  color: var(--highliter);
+}
+
+.login-btn-box {
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  /* background-color: coral; */
+}
+.login-btn {
+  padding: 0.2rem 1rem;
+  font-size: 1.2rem;
+  border: 0.1rem solid whitesmoke;
+  background-color: black;
+  color: whitesmoke;
+}
+.login-btn.active,
+.login-btn:hover {
+  border-color: var(--highliter);
+}
+
+/* secondary navbar style */
+
+.second-navbar {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 0.1rem solid var(--highliter);
+}
+.navlinks {
+  width: 70%;
+}
+.navlinks ul {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navlinks ul li a {
+  font-size: 1.2rem;
+  color: rgb(190, 190, 190);
+  padding-bottom: 0.1rem;
+}
+.navlinks ul li a:hover {
+  color: var(--highliter);
+  border-bottom: 0.2rem solid var(--highliter);
+}
+.search-box {
+  height: 2rem;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: black;
+  border-bottom: 0.1rem solid whitesmoke;
+}
+.search-box input {
+  width: 12rem;
+  color: whitesmoke;
+  border-style: none;
+  background-color: transparent;
+  outline-style: none;
+  animation-name: decrease;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+  animation-fill-mode: backwards;
+}
+.search-box input:focus {
+  background-color: transparent;
+  animation-name: increase;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+@keyframes increase {
+  0% {
+    width: 14rem;
+  }
+  50% {
+    width: 18rem;
+  }
+  100% {
+    width: 16rem;
+  }
+}
+@keyframes decrease {
+  0% {
+    width: 16rem;
+  }
+  50% {
+    width: 18rem;
+  }
+  100% {
+    width: 14rem;
+  }
+}
+.icon-box {
+  padding-top: 0.4rem;
+  background-color: transparent;
+  color: whitesmoke;
+}
+.search-icon {
+  font-size: 1.2rem;
+}
+
+/* responsive css for large device more than 1199.98px */
+@media (min-width: 1199.98px) {
+  .navbar {
+    padding-inline: 2rem;
+    height: 6rem;
+  }
+  .logo-box {
+    padding: 0.4rem 1rem;
+  }
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  .login-btn-box {
+    margin-top: 0.4rem;
+    padding: 0.8rem 1rem;
+  }
+  .login-btn {
+    padding: 0.2rem 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+/* responsive css for medium device to large device 768px to 1199.98px */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .navbar {
+    padding-inline: 2rem;
+    height: 6rem;
+  }
+  .logo-box {
+    padding: 0.4rem 1rem;
+  }
+  .logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .login-btn-box {
+    margin-top: 0.4rem;
+    padding: 0.8rem 1rem;
+  }
+  .login-btn {
+    padding: 0.2rem 1rem;
+    font-size: 2rem;
+  }
+
+  .second-navbar {
+    all: unset;
+    padding: 0.2rem 1rem;
+    display: grid;
+    grid-template-columns: 10% auto 10%;
+    grid-template-rows: 50% 50%;
+    gap: 0.2rem;
+    justify-items: center;
+    background-color: black;
+    height: 7rem;
+  }
+  .navlinks {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 100%;
+  }
+  .navlinks ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navlinks ul li a {
+    font-size: 1.4rem;
+  }
+  .search-box {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: fit-content;
+    height: 3rem;
+  }
+  .search-box input {
+    width: 16rem;
+    animation-name: decrease;
+    font-size: 1rem;
+  }
+  .search-box input:focus {
+    animation-name: increase;
+  }
+  @keyframes increase {
+    0% {
+      width: 16rem;
+    }
+    50% {
+      width: 20rem;
+    }
+    100% {
+      width: 18rem;
+    }
+  }
+  @keyframes decrease {
+    0% {
+      width: 18rem;
+    }
+    50% {
+      width: 20rem;
+    }
+    100% {
+      width: 16rem;
+    }
+  }
+}
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 575.98px) and (max-width: 767.98px) {
+  /* primary navbar style */
+  .navbar {
+    padding-inline: 1rem;
+    height: 6rem;
+  }
+  .logo-box {
+    padding: 0.2rem 0.5rem;
+    /* background-color: aquamarine; */
+  }
+  .logo {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  .login-btn-box {
+    height: fit-content;
+    /* background-color: coral; */
+  }
+  .login-btn {
+    margin-top: 0.4rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border: 0.1rem solid whitesmoke;
+    background-color: black;
+    color: whitesmoke;
+  }
+  .second-navbar {
+    all: unset;
+    padding: 0.2rem 1rem;
+    display: grid;
+    grid-template-columns: 2.5% auto 2.5%;
+    grid-template-rows: 50% 50%;
+    gap: 0.1rem;
+    justify-items: center;
+    background-color: black;
+    height: 7rem;
+  }
+  .navlinks {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    width: 100%;
+  }
+  .navlinks ul {
+    width: 100%;
+  }
+  .navlinks ul li a {
+    font-size: 1.4rem;
+  }
+  .search-box {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    width: fit-content;
+    height: 3rem;
+  }
+  .search-box input {
+    width: 16rem;
+    animation-name: decrease;
+    font-size: 1.2rem;
+  }
+  .search-box input:focus {
+    animation-name: increase;
+  }
+}
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 575.98px) {
+  /* primary navbar style */
+  .navbar {
+    padding-inline: 0.5rem;
+    width: 100%;
+    height: 6rem;
+  }
+  .logo-box {
+    padding: 0rem 0.5rem;
+  }
+  .logo {
+    font-size: 6vmin;
+    font-weight: 500;
+  }
+
+  .login-btn-box {
+    padding: 0.5rem 1rem;
+  }
+  .login-btn {
+    padding: 0.2rem 1rem;
+    font-size: 4vmin;
+  }
+
+  .second-navbar .navlinks {
+    position: absolute;
+    left: -1000px;
+  }
+  @keyframes increase {
+    0% {
+      width: 12rem;
+    }
+    50% {
+      width: 16rem;
+    }
+    100% {
+      width: 14rem;
+    }
+  }
+  @keyframes decrease {
+    0% {
+      width: 14rem;
+    }
+    50% {
+      width: 16rem;
+    }
+    100% {
+      width: 12rem;
+    }
+  }
+}

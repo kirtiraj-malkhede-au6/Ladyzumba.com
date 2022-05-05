@@ -1,0 +1,101 @@
+.main-container {
+  z-index: -1;
+  position: relative;
+  padding: 1rem 1rem;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 9.6rem);
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  gap: 1rem;
+  border-bottom: 2px solid grey;
+  background-color: rgb(0, 0, 0);
+}
+.main-container:hover > .line {
+  animation-play-state: paused;
+}
+.line {
+  padding: 2px 8px;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-size: 3vmin;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 3px;
+}
+.line.even {
+  animation-name: anticlockwise;
+  /* transform: rotate(5deg); */
+  background-color: white;
+  /* border-bottom: 2px solid #2cef60; */
+}
+.line.odd {
+  animation-name: clockwise;
+  /* transform: rotate(-5deg); */
+  background-color: grey;
+  /* border-bottom: 2px solid #00b7ff; */
+}
+
+.welcom-heading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  font-size: 8vmin;
+  text-size-adjust: auto;
+  padding-top: 6rem;
+  color: rgb(255, 255, 255);
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.51);
+}
+
+@keyframes clockwise {
+  0% {
+    /* transform: rotateX(0deg); */
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 0px 0px 1px whitesmoke;
+  }
+  50% {
+    /* transform: rotateX(360deg); */
+    color: black;
+    background-color: gray;
+    box-shadow: 0px 0px 1px gray;
+  }
+  100% {
+    /* transform: rotateX(0deg); */
+    background-color: black;
+    color: gray;
+    box-shadow: 0px 0px 1px whitesmoke;
+  }
+}
+@keyframes anticlockwise {
+  0% {
+    /* transform: rotateX(360deg); */
+    color: black;
+    background-color: gray;
+    box-shadow: 0px 0px 1px gray;
+  }
+  50% {
+    /* transform: rotateX(0deg); */
+    background-color: black;
+    color: gray;
+    box-shadow: 0px 0px 1px whitesmoke;
+  }
+  100% {
+    /* transform: rotateX(360deg); */
+    color: black;
+    background-color: gray;
+    box-shadow: 0px 0px 1px gray;
+  }
+}
+
+/* responsive css for medium device to large device 768px to 1199.98px */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+}
