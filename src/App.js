@@ -1,8 +1,7 @@
 import "./App.css";
-import Footer from "./componets/Footer/Footer";
 import Header from "./componets/Header/Header";
 import Main from "./componets/Main/Main";
-
+import Footer from "./componets/Footer/Footer";
 const App = () => {
   return (
     <div className="App">
