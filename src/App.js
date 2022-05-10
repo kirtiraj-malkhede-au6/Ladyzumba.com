@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./componets/Footer/Footer";
 import Header from "./componets/Header/Header";
 import Main from "./componets/Main/Main";
 
@@ -7,37 +8,7 @@ const App = () => {
     <div className="App">
       <Header></Header>
       <Main></Main>
-      <br></br>
-      <br></br>
-
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+      <Footer></Footer>
     </div>
   );
 };

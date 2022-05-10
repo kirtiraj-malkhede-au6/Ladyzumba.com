@@ -6,7 +6,9 @@ const Header = () => {
     <React.Fragment>
       <nav className="navbar">
         <div className="logo-box">
-          <h1 className="logo">LADY|ZUMB△</h1>
+          <h1 className="logo">
+            <a href="">LADY|ZUMB△</a>
+          </h1>
         </div>
 
         <div className="login-btn-box">
